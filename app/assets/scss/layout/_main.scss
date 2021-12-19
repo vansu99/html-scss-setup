@@ -1,0 +1,49 @@
+.container {
+  max-width: 930px;
+  padding: 0 15px;
+}
+
+
+.common-section {
+  position: relative;
+  border: 2px solid #3c3c3c;
+  border-top: none;
+  font-weight: 300;
+  padding-bottom: 50px;
+
+  &.common-section--white {
+    border-color: #fff;
+    h2 {
+      color: #fff;
+      &:before,
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+
+  h2 {
+    white-space: nowrap;
+    position: relative;
+    font-weight: bold;
+    @include font-size(34px);
+    margin-bottom: 29px;
+    @include transform(translateY(-19px));
+    text-align: center;
+    &:before,
+    &:after {
+      border-top: 2px solid #3c3c3c;
+      content: '';
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      width: 29%;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+}
